@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="container" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="image.tool.FXMLDocumentController" alignment="center" hgap="10" vgap="10">
+<padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+    <Text fx:id="title" text="Image Tool"  GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0"   /> 
+    <Label text="Destination Path:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Button fx:id="DestinationPath" text="Choose Path" GridPane.columnIndex="1" GridPane.rowIndex="1" 
+    onAction="#chooseDestinationPath"     /> 
+    <Label fx:id="destination" GridPane.columnIndex="2" GridPane.rowIndex="1"/>   
+    
+    <Label text="Choose Image" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <Button fx:id="chooseImage" text="Choose Image" GridPane.columnIndex="1" GridPane.rowIndex="2" 
+    onAction="#chooseImage"     />  
+    <Label fx:id="totalFiles"  text="" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+           
+    <Label text="Select dimensions" GridPane.columnIndex="0" GridPane.rowIndex="3"  />
+    <ComboBox fx:id="Width" GridPane.columnIndex="1" GridPane.rowIndex="3"/> 
+    <ComboBox fx:id="Height" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+       
+    <Label text="Custom" GridPane.columnIndex="0" GridPane.rowIndex="4"/>  
+    <TextField fx:id="cWidth" text=""  GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <TextField fx:id="cHeight" text="" GridPane.columnIndex="2" GridPane.rowIndex="4" />  
+    
+    <Button fx:id="convertButton" text="Resize" GridPane.columnIndex="0" GridPane.rowIndex="5" 
+    onAction="#convertImage"    />  
+          
+    <ProgressBar fx:id="progressBar" GridPane.columnIndex="0"  GridPane.rowIndex="6"/>   
+    <Label fx:id="progress" text="Progress" GridPane.columnIndex="1" GridPane.rowIndex="6"/>       
+    
+</GridPane>
